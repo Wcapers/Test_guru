@@ -1,8 +1,7 @@
 # README
-
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Список сущностей для проекта:
+*Admin
+*Test
+*Question
+*Answer
+*User
