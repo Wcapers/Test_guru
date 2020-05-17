@@ -1,7 +1,7 @@
 # README
 Список сущностей для проекта:
-*Admin
-*Test
-*Question
-*Answer
-*User
+Admin
+Test
+Question
+Answer
+User
