@@ -10,25 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_22_220722) do
+ActiveRecord::Schema.define(version: 2020_05_22_221733) do
 
   create_table "answers", force: :cascade do |t|
-    t.text "body"
-    t.boolean "correct"
+    t.text "body", null: false
+    t.boolean "correct", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "questions_id"
+    t.integer "questions_id", null: false
     t.index ["questions_id"], name: "index_answers_on_questions_id"
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "questions", force: :cascade do |t|
-    t.text "body"
+    t.text "body", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "tests_id"
@@ -36,19 +36,19 @@ ActiveRecord::Schema.define(version: 2020_05_22_220722) do
   end
 
   create_table "tests", force: :cascade do |t|
-    t.string "title"
-    t.integer "level"
+    t.string "title", null: false
+    t.integer "level", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "categories_id"
+    t.integer "categories_id", null: false
     t.index ["categories_id"], name: "index_tests_on_categories_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "login"
-    t.string "email"
-    t.string "password"
+    t.string "name", null: false
+    t.string "login", null: false
+    t.string "email", null: false
+    t.string "password", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
