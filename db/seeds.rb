@@ -5,3 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+#Insert in categories
+biology = Category.create(title: 'Биология')
+math = Category.create(title: 'Математика')
+comp_since = Category.create(title: 'Информатика')
+
+#Insert in tests
+first_test = Test.create(title: 'Умножение', level: 3, categories_id: math.id)
+second_test = Test.create(title: 'Грибы', level: 2, categories_id: biology.id)
+third_test = Test.create(title: 'Биты и байты', level: 4, categories_id: comp_since.id)
+fourth_test = Test.create(title: 'Деление', level: 4, categories_id: math.id)
+fifth_test = Test.create(title: 'Паразиты', level: 1, categories_id: biology.id)
+
+#Insert in users
+user = User.create(name: 'Timur', login: 'tim_miraz', email: 'tim_miraz@mail.ru', password: 12345)
+
+#Insert in questions
+first_question = Question.create(body: '2*5=?', tests_id: first_test.id)
+second_question = Question.create(body: '15*3=?', tests_id: first_test.id)
+third_question = Question.create(body: 'Мухомор ядовитый?', tests_id: second_test.id)
+fourth_question = Question.create(body: '20/10=?', tests_id: fourth_test.id)
+fifth_question = Question.create(body: 'Бит больше чем байт?', tests_id: third_test.id)
