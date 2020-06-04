@@ -39,6 +39,3 @@ third_question_answers = Answer.create([{ body: 'да', correct: true, questions
 fourth_question_answers = Answer.create([{ body: '2', correct: true, questions_id: fourth_question.id }, { body: '5',  questions_id: fourth_question.id }, { body: '10',  questions_id: fourth_question.id }, { body: '12',  questions_id: fourth_question.id }])
 
 fifth_question_answers = Answer.create([{ body: 'нет', correct: true, questions_id: fifth_question.id }, { body: 'да', questions_id: fifth_question.id }])
-
-#Insert in result
-Result.create(test_id: first_test.id, user_id: timur.id)
