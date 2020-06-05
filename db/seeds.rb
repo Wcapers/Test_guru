@@ -12,11 +12,11 @@ math = Category.create(title: 'Математика')
 comp_since = Category.create(title: 'Информатика')
 
 #Insert in tests
-first_test = Test.create(title: 'Умножение', level: 3, category_id: math.id)
-second_test = Test.create(title: 'Грибы', level: 2, category_id: biology.id)
-third_test = Test.create(title: 'Биты и байты', level: 4, category_id: comp_since.id)
-fourth_test = Test.create(title: 'Деление', level: 4, category_id: math.id)
-fifth_test = Test.create(title: 'Паразиты', level: 1, category_id: biology.id)
+first_test = Test.create(title: 'Умножение', level: 3, category_id: 2)
+second_test = Test.create(title: 'Грибы', level: 2, category_id: 1)
+third_test = Test.create(title: 'Биты и байты', level: 4, category_id: 3)
+fourth_test = Test.create(title: 'Деление', level: 4, category_id: 2)
+fifth_test = Test.create(title: 'Паразиты', level: 1, category_id: 1)
 
 #Insert in users
 timur = User.create(name: 'Timur', login: 'tim_miraz', email: 'tim_miraz@mail.ru', password: 12345)
@@ -39,3 +39,10 @@ third_question_answers = Answer.create([{ body: 'да', correct: true, question_
 fourth_question_answers = Answer.create([{ body: '2', correct: true, question_id: fourth_question.id }, { body: '5',  question_id: fourth_question.id }, { body: '10',  question_id: fourth_question.id }, { body: '12',  question_id: fourth_question.id }])
 
 fifth_question_answers = Answer.create([{ body: 'нет', correct: true, question_id: fifth_question.id }, { body: 'да', question_id: fifth_question.id }])
+
+#Insert in tests_users
+TestsUser.create(user_id: timur.id, test_id: 1)
+TestsUser.create(user_id: timur.id, test_id: 2)
+TestsUser.create(user_id: timur.id, test_id: 3)
+TestsUser.create(user_id: timur.id, test_id: 4)
+TestsUser.create(user_id: timur.id, test_id: 5)
