@@ -6,21 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#Insert in users
+timur = User.create(name: 'Timur', login: 'tim_miraz', email: 'tim_miraz@mail.ru', password: 12345)
+ivan = User.create(name: 'Ivan', login: 'ivan_ivan', email: 'ivan_ivana@mail.ru', password: 54321)
+
 #Insert in categories
 biology = Category.create(title: 'Биология')
 math = Category.create(title: 'Математика')
 comp_since = Category.create(title: 'Информатика')
 
 #Insert in tests
-first_test = Test.create(title: 'Умножение', level: 3, category_id: math.id)
-second_test = Test.create(title: 'Грибы', level: 2, category_id: biology.id)
-third_test = Test.create(title: 'Биты и байты', level: 4, category_id: comp_since.id)
-fourth_test = Test.create(title: 'Деление', level: 4, category_id: math.id)
-fifth_test = Test.create(title: 'Паразиты', level: 1, category_id: biology.id)
+first_test = Test.create(title: 'Умножение', level: 3, category_id: math.id, author_id: timur.id )
+second_test = Test.create(title: 'Грибы', level: 2, category_id: biology.id, author_id: timur.id)
+third_test = Test.create(title: 'Биты и байты', level: 4, category_id: comp_since.id, author_id: timur.id)
+fourth_test = Test.create(title: 'Деление', level: 4, category_id: math.id, author_id: timur.id)
+fifth_test = Test.create(title: 'Паразиты', level: 1, category_id: biology.id, author_id: timur.id)
 
-#Insert in users
-timur = User.create(name: 'Timur', login: 'tim_miraz', email: 'tim_miraz@mail.ru', password: 12345)
-ivan = User.create(name: 'Ivan', login: 'ivan_ivan', email: 'ivan_ivana@mail.ru', password: 54321)
 
 #Insert in questions
 first_question = Question.create(body: '2*5=?', test_id: first_test.id)
