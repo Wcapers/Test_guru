@@ -2,10 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title> Список вопросов теста </title>
   </head>
   <body>
-    <h1>Hi index</h1>
-    <h2><%= Test.find(params[:test_id]) %></h2>
+    <h1> Tecт: <%= @test.title %></h1>
+    <p>Вопросы:</p>
+  <ul>
+    <%@questions.each do |q| %>
+	<li><%=q.body%></li>
+  <%end%>
+  </ul>
   </body>
 </html>
