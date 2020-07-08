@@ -1,0 +1,16 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Список вопросов теста </title>
+  </head>
+  <body>
+    <h1> Tecт: <%= @test.title %></h1>
+    <p>Вопросы:</p>
+  <ul>
+    <%@questions.each do |q| %>
+	<li><%=q.body%></li>
+  <%end%>
+  </ul>
+  </body>
+</html>
