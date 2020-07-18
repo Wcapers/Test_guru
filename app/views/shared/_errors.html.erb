@@ -1,0 +1,8 @@
+<% if @question.errors.present? %>
+  <p>Errors:</p>
+  <ul>
+    <% @question.errors.full_messages.each do |err| %>
+      <li><%= err %></li>
+    <% end %>
+  </ul>
+<% end %>
