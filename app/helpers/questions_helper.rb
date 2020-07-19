@@ -1,9 +1,9 @@
 module QuestionsHelper
   def question_header(resource)
     if resource.persisted?
-      "Edit #{resource.test.title} Question"      
+      "Изменить вопрос #{resource.test.title} "
     else
-      "Create New #{resource.test.title} Question"
+      "Создать новый вопрос в тесте #{resource.test.title}"
     end
   end
 end
