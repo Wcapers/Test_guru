@@ -21,12 +21,18 @@ class QuestionsController < ApplicationController
      if @question.save
       redirect_to test_questions_url(@test)
     else
-      render inline: '<h1> ❗<%= @question.errors.full_messages %>❗</h1>'
+      render inline: '<p><%= @question.errors.full_messages %></p>'
     end
   end
 
+  def edit
+  end
+
+  def update
+  end
   def destroy
     @question.destroy
+    redirect_to @question.test
   end
 
   private
