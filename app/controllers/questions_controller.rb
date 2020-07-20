@@ -21,7 +21,7 @@ class QuestionsController < ApplicationController
      if @question.save
       redirect_to test_questions_url(@test)
     else
-      render inline: '<p><%= @question.errors.full_messages %></p>'
+      redirect_to new_test_question_path
     end
   end
 
