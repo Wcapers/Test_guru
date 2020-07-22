@@ -3,7 +3,7 @@ class Answer < ApplicationRecord
 
   validates :body, presence: true
 
-  scope :corrects, -> { where(correct: true) }
+  scope :correct, -> { where(correct: true) }
 
   validate :validate_answers
 
