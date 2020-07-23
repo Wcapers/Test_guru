@@ -1,7 +1,7 @@
-<% if @question.errors.present? %>
+<% if resource.errors.present? %>
   <p>Errors:</p>
   <ul>
-    <% @question.errors.full_messages.each do |err| %>
+    <% question.errors.full_messages.each do |err| %>
       <li><%= err %></li>
     <% end %>
   </ul>

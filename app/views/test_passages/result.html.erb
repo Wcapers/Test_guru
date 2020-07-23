@@ -1,0 +1,9 @@
+<h1>Тест <%= @test_passage.test.title %> завершен!</h1>
+<% if @test_passage.succes? %>
+  <p style="color: green"> Вы прошли тест!<br>
+     Результат: <%= @test_passage.result %></p>
+<% else %>
+  <p style="color: red"> Вы не прошли тест!<br>
+    Результат: <%= @test_passage.result %>
+  </p>
+<% end %>

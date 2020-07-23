@@ -40,10 +40,3 @@ third_question_answers = Answer.create([{ body: 'да', correct: true, question_
 fourth_question_answers = Answer.create([{ body: '2', correct: true, question_id: fourth_question.id }, { body: '5',  question_id: fourth_question.id }, { body: '10',  question_id: fourth_question.id }, { body: '12',  question_id: fourth_question.id }])
 
 fifth_question_answers = Answer.create([{ body: 'нет', correct: true, question_id: fifth_question.id }, { body: 'да', question_id: fifth_question.id }])
-
-#Insert in tests_users
-TestsUser.create(user_id: timur.id, test_id: first_test.id)
-TestsUser.create(user_id: timur.id, test_id: second_test.id)
-TestsUser.create(user_id: timur.id, test_id: third_test.id)
-TestsUser.create(user_id: timur.id, test_id: fourth_test.id)
-TestsUser.create(user_id: timur.id, test_id: fifth_test.id)
