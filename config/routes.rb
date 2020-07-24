@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  get 'user/new'
+  root 'tests#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :users, only: :create
+
+  get :signup, to: 'user#new'
+
   resources :tests do
     resources :questions, shallow: true
     resources :questions, shallow: true, except: :index do
