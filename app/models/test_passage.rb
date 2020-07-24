@@ -6,7 +6,7 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
   before_validation :before_validation_set_next_question, on: :update
-  MIN = 85
+  MIN_TRESHOLD = 85
 
   def completed?
     current_question.nil?
@@ -18,13 +18,13 @@ class TestPassage < ApplicationRecord
   end
 
   def succes?
-   result >= MIN
+   result >= MIN_TRESHOLD
   end
 
   def questions_count
     self.test.questions.count
   end
-  
+
   def result
     (self.correct_questions / questions_count) * 100
   end
