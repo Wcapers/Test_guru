@@ -2,8 +2,6 @@ require 'digest/sha1'
 
 class User < ApplicationRecord
 
-  include Auth
-
   has_many :tests_author, class_name: 'Test', foreign_key: :author_id
   has_many :test_passages
   has_many :tests, through: :test_passages
@@ -12,6 +10,8 @@ class User < ApplicationRecord
   validates :password, confirmation: true
   validates :email, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+
+  has_secure_password
 
   def get_tests (level)
     self.tests.where(level: level)

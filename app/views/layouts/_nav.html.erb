@@ -1,4 +1,9 @@
+<nav>
 <ul>
+  <% if logged_in? %>
+    <p>Welcome, <b><%= current_user.email %></b></p>
+  <% end %>
   <li><%= link_to "Все тесты", tests_path %></li>
   <li><a href="./about"> About</a> </li>
 </ul>
+</nav>
