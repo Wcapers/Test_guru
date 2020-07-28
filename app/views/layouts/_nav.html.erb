@@ -1,4 +1,13 @@
-<ul>
-  <li><%= link_to "Все тесты", tests_path %></li>
-  <li><a href="./about"> About</a> </li>
-</ul>
+<nav>
+  <h1><%= link_to "Test_guru", root_path %></h1>
+  <% if logged_in? %>
+
+    <p>Welcome, <b><%= current_user.login %> Guru</b></p>
+    <p><%= link_to "Все тесты", tests_path %></p>
+    <p><%= link_to 'Выйти', session_path(current_user.id), method: :delete, data: {confirm: "Are you sure?"} %></p>
+
+  <% else %>
+    <p><%= link_to "Регистрация", signup_path %></p>
+  <% end %>
+  <p><a href="./about"> About</a> </p>
+</nav>

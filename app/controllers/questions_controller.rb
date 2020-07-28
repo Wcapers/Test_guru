@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_test, only: %i[index new create]
   before_action :find_question, only: %i[show destroy edit update]
 
@@ -9,7 +10,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    
+
   end
 
   def new
