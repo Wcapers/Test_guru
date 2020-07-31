@@ -1,0 +1,13 @@
+<h1>Список тестов</h1>
+<table>
+  <tr>
+    <td>Название</td>
+    <td>Категория</td>
+    <td>Уровень</td>
+    <td>Вопросы</td>
+    <td colspan="2", align="center" > Действия</td>
+  </tr>
+<%=render @tests%>
+</table>
+
+<%= link_to 'Добавить тест', new_admin_test_path %>

@@ -1,0 +1,12 @@
+<%= render 'shared/errors', resource: @test %>
+<%= form_with model: [:admin, @test], local: true do |f| %>
+  <p>
+    <%= f.label :title %> <br>
+    <%= f.text_field :title %> <br>
+    <%= f.label :level %> <br>
+    <%= f.text_field :level %> <br>
+    <%= f.label :category_id %> <br>
+    <%= f.collection_select(:category_id, Category.all, :id, :title) %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
