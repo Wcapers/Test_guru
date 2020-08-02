@@ -6,7 +6,9 @@ ru:
     attributes:
       test:
         title: "Название"
-        
+        category_id: "Категория"
+        level: "Сложность"
+
     errors:
       messages:
         blank: "Не может быть пустым"

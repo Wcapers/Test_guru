@@ -21,6 +21,11 @@ ru:
         actions: "Действия"
       create:
         success: "Тест успешно создан!"
+      test:
+        edit: "Редактировать"
+        delete: "Удалить"
+        sure?: "Вы уверены?"
+        start: "Начать"
 
   tests:
     index:
@@ -30,9 +35,6 @@ ru:
       level: "Сложность"
       questions: "Вопросы"
       actions: "Действия"
-  test:
-    index:
-      start: "Старт"
     helpers:
       submit:
         test:
@@ -43,6 +45,8 @@ ru:
             title: "Название"
             level: "Сложность"
             category_id: "Категория"
+    test:
+      start: "Начать"
 
   test_passages:
     result:

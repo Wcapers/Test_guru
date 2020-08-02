@@ -4,7 +4,7 @@ en:
       new:
         title: "New Test"
       index:
-        header: "Tricke tests"
+        header: "Tricky Tests"
         create_test: "Create Test"
         name: "Name"
         category: "Category"
@@ -17,14 +17,19 @@ en:
         add: "Add Question"
         back: "Back"
         test: "Test"
-        question: "Вопрос"
-        actions: "Действия"
+        question: "Question"
+        actions: "Actions"
       create:
         success: "Test was successfully created."
-
+        # for _test file:
+      test:
+        edit: "Edit"
+        delete: "Delete"
+        sure?: "Are you sure?"
+        start: "Start"
   tests:
     index:
-      header: "Tricke tests"
+      header: "Tricky tests"
       create_test: "Create Test"
       name: "Name"
       category: "Category"

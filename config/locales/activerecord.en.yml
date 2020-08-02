@@ -6,6 +6,8 @@ en:
     attributes:
       test:
         title: "Title"
+        category_id: "Category"
+        level: "Level"
 
     errors:
       messages:
