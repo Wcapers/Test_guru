@@ -1,11 +1,12 @@
 <%= link_to '<', admin_tests_path %>
-<h1> Tecт: <%= @test.title %></h1>
+<h1> <%= t('.test') %>:
+   <%= @test.title %></h1>
 <table>
   <tr>
-    <td>Вопрос</td>
-    <td colspan="2", align="center" > Действия</td>
+    <td><%= t('.question') %></td>
+    <td colspan="2", align="center" > <%= t('.actions') %></td>
 
   </tr>
 <%= render @test.questions %>
 </table>
-<%= link_to 'Добавить вопрос', new_admin_test_question_path(@test) %>
+<%= link_to <%= t('.add') %>, new_admin_test_question_path(@test) %>
