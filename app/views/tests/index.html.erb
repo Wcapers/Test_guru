@@ -1,11 +1,11 @@
-<%= link_to '<', :back %>
-<h1>Список тестов</h1>
+<h1><%= t('.header') %></h1>
 <table>
   <tr>
-    <td>Название</td>
-    <td>Категория</td>
-    <td>Уровень</td>
-    <td>Вопросы</td>
+    <td><%= t('.name') %></td>
+    <td><%= t('.category') %></td>
+    <td><%= t('.level') %></td>
+    <td><%= t('.questions') %></td>
+    <td><%= t('.actions') %></td>
   </tr>
 <%=render @tests%>
 </table>
