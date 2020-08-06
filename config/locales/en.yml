@@ -54,12 +54,17 @@ en:
   test_passages:
     result:
       header: "The %{title} test was completed!"
-    shared:
-      errors:
-        header:
-          one: "%{count} error detected"
-          other: "%{count} errors detected"
+    gist:
+      success: "Gist created,%{gist_link}!"
+      failure: "Error, Gist can't be created"
 
-    tests_mailer:
-      completed_test:
-        subject: "You complete test!"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests_mailer:
+    completed_test:
+      subject: "You complete test!"

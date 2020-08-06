@@ -8,7 +8,8 @@ class User < ApplicationRecord
   has_many :tests_author, class_name: 'Test', foreign_key: :author_id
   has_many :test_passages
   has_many :tests, through: :test_passages
-
+  has_many :gists
+  
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true,
     presence: true
 
