@@ -5,6 +5,7 @@
     Welcome, <b><%= current_user.email %></b> Guru |
     <%if current_user.admin?%>
       <%=link_to "Панель админа |",admin_tests_path %>
+      <%= link_to 'Gists', admin_gists_path %>
     <%end %>
     <%= link_to 'Выйти', destroy_user_session_path, method: :delete, data: {confirm: "Are you sure?"} %>
 
