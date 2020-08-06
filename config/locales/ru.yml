@@ -26,6 +26,10 @@ ru:
         delete: "Удалить"
         sure?: "Вы уверены?"
         start: "Начать"
+    gists:
+      index:
+        url: "Url адрес"
+        question: "Вопрос"
 
   tests:
     index:
@@ -54,6 +58,8 @@ ru:
     gist:
       success: "Гист создан,%{gist_link}!"
       failure: "Ошибка, гист не может быть создан"
+    show:
+      gist_question: "Создать Гист"
 
   shared:
     errors:
@@ -66,3 +72,6 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы прошли тест!"
+
+
+  description: "Вопрос из теста %{test}"

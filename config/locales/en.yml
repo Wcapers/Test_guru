@@ -27,6 +27,10 @@ en:
         delete: "Delete"
         sure?: "Are you sure?"
         start: "Start"
+    gists:
+      index:
+        url: "Url adress"
+        question: "Question"
   tests:
     index:
       header: "Tricky tests"
@@ -54,10 +58,13 @@ en:
   test_passages:
     result:
       header: "The %{title} test was completed!"
+
     gist:
       success: "Gist created,%{gist_link}!"
       failure: "Error, Gist can't be created"
 
+    show:
+      gist_question: "Create Gist"
 
   shared:
     errors:
@@ -68,3 +75,5 @@ en:
   tests_mailer:
     completed_test:
       subject: "You complete test!"
+
+  description: "A question about %{test} test"
