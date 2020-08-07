@@ -20,8 +20,9 @@ class TestPassagesController < ApplicationController
   end
 
   def gist
-    result = GistQuestionService.new(@test_passage.current_question).call
-    unless result.nil? #result = nil если запрос не выполнен
+    attach = GistQuestionService.new(@test_passage.current_question)
+    result = attach.call
+    if attach.success?
       current_user.gists.create(question_id: @test_passage.current_question_id, url: result.html_url)
       flash[:notice] =  t('.success', gist_link: view_context.link_to('Gist', result.html_url, :target => '_blank'))
     else

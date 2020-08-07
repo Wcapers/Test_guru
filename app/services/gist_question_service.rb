@@ -6,8 +6,16 @@ class GistQuestionService
     @client = client || Octokit::Client.new(access_token: ENV['GIST_TOKEN'])
   end
 
+  def client
+    @client
+  end
+
   def call
     @client.create_gist(gist_params)
+  end
+
+  def success?
+    @client.last_response.status == 201 || 200
   end
 
   private
