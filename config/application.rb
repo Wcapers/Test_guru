@@ -5,6 +5,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+Dotenv::Railtie.load
 
 module TestGuru
   class Application < Rails::Application
@@ -14,6 +15,9 @@ module TestGuru
 
     #I18n.load_path += Dir["#{config.root}/lib/modules/#{module_name}/config/locales/*.yml"]
     config.i18n.default_locale = :ru
+    config.enable_dependency_loading = true
+    config.autoload_paths << Rails.root.join('lib')
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

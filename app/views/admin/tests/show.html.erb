@@ -5,8 +5,7 @@
   <tr>
     <td><%= t('.question') %></td>
     <td colspan="2", align="center" > <%= t('.actions') %></td>
-
   </tr>
 <%= render @test.questions %>
 </table>
-<%= link_to <%= t('.add') %>, new_admin_test_question_path(@test) %>
+<%= link_to t('.add'), new_admin_test_question_path(@test) %>

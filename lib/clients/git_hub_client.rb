@@ -1,0 +1,3 @@
+class GitHubClient
+  # code
+end
