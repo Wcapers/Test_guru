@@ -26,6 +26,8 @@ ru:
         delete: "Удалить"
         sure?: "Вы уверены?"
         start: "Начать"
+      form_inline:
+        submit: "OK"
     gists:
       index:
         url: "Url адрес"
