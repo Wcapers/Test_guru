@@ -29,6 +29,14 @@ class TestPassage < ApplicationRecord
     (self.correct_questions / questions_count) * 100
   end
 
+  def progress_bar
+    (current_question_number * 100) / questions_count
+  end
+
+  def current_question_number
+    test.questions.to_a.index(current_question) + 1
+  end
+
   private
 
 
