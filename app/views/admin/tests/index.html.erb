@@ -1,11 +1,16 @@
 <h1><%= t('.header') %></h1>
-<table>
-  <tr>
-    <td><%= t('.name') %></td>
-    <td><%= t('.category') %></td>
-    <td><%= t('.level') %></td>
-    <td><%= t('.questions') %></td>
-    <td colspan="2", align="center" > <%= t('.actions') %></td>
+<%= render 'shared/errors', resource: @test %>
+<table class="table">
+  <tr class="table-header">
+    <th class="sort-by-title pointer">
+      <%= t('.name') %>
+      <%=octicon 'arrow-up',class: 'text-success hide' %>
+        <%=octicon 'arrow-down',class: 'text-success hide' %>
+    </th>
+    <th><%= t('.category') %></th>
+    <th><%= t('.level') %></th>
+    <th><%= t('.questions') %></th>
+    <th colspan="2", align="center" > <%= t('.actions') %></th>
   </tr>
 <%=render @tests%>
 </table>

@@ -27,6 +27,9 @@ en:
         delete: "Delete"
         sure?: "Are you sure?"
         start: "Start"
+      form_inline:
+        submit: "OK"
+        
     gists:
       index:
         url: "Url adress"
