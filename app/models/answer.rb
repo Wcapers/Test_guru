@@ -5,11 +5,11 @@ class Answer < ApplicationRecord
 
   scope :correct, -> { where(correct: true) }
 
-  validate :validate_answers
+#  validate :validate_answers
 
   private
 
-  def validate_answers
-    errors.add(:question) if self.question.answers.count > 4
-  end
+#  def validate_answers
+#    errors.add(:question) if self.question.answers.count >= 4
+#  end
 end
