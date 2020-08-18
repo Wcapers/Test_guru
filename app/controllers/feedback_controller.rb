@@ -5,6 +5,7 @@ class FeedbackController < ApplicationController
   def create
     user = current_user.email
     FeedbackMailer.feedback(user, feedback_text).deliver_now
+    flash[:notice] = "Ваш отзыв отправлен"
     redirect_to root_path
   end
 

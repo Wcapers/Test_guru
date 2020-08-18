@@ -84,3 +84,7 @@ en:
       title: "Feedback"
 
   description: "A question about %{test} test"
+
+  success: "Success"
+
+  fail: "Fail"

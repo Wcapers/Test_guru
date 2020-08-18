@@ -82,3 +82,5 @@ ru:
         feedback: "Отзыв"
 
   description: "Вопрос из теста %{test}"
+  success: "Успешно"
+  fail: "Провал"
