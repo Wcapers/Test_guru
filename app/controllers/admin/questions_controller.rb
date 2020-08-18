@@ -20,8 +20,7 @@ class Admin::QuestionsController < Admin::BaseController
   def create
      @question = @test.questions.new(question_params)
      if @question.save
-       flash[:notice] = t('success')
-      redirect_to admin_test_questions_path(@test)
+      redirect_to admin_test_questions_path(@test), notice: t('success')
     else
       flash[:error] = t('fail')
       redirect_to new_admin_test_question_path
@@ -33,8 +32,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   def update
     if @question.update(question_params)
-      flash[:notice] = t('success')
-      redirect_to admin_question_path(@question)
+      redirect_to admin_question_path(@question), notice: t('success')
     else
       render 'edit'
    end
@@ -42,8 +40,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   def destroy
     @question.destroy
-    flash[:notice] = t('success')
-    redirect_to admin_test(@question.test)
+    redirect_to admin_test(@question.test), notice: t('success')
   end
 
   private
