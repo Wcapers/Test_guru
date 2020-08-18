@@ -20,7 +20,7 @@ class Admin::QuestionsController < Admin::BaseController
   def create
      @question = @test.questions.new(question_params)
      if @question.save
-      redirect_to admin_test_questions_path(@test), notice: t('success')
+      redirect_to admin_test_path(@test), notice: t('success')
     else
       flash[:error] = t('fail')
       redirect_to new_admin_test_question_path
