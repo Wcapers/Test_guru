@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_18_231328) do
+ActiveRecord::Schema.define(version: 2020_08_18_232740) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -95,10 +95,10 @@ ActiveRecord::Schema.define(version: 2020_08_18_231328) do
     t.index ["type"], name: "index_users_on_type"
   end
 
-  add_foreign_key "answers", "questions"
+  add_foreign_key "answers", "questions", on_delete: :cascade
   add_foreign_key "gists", "questions"
   add_foreign_key "gists", "users"
-  add_foreign_key "questions", "tests"
+  add_foreign_key "questions", "tests", on_delete: :cascade
   add_foreign_key "test_passages", "questions", column: "current_question_id", on_delete: :cascade
   add_foreign_key "test_passages", "tests", on_delete: :cascade
   add_foreign_key "test_passages", "users", on_delete: :cascade
