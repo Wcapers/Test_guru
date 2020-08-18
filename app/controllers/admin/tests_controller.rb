@@ -50,10 +50,8 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def destroy
-    def destroy
       @test.destroy
       redirect_to admin_tests_path, notice: t('success')
-    end
   end
 
   private
