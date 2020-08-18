@@ -96,8 +96,8 @@ ActiveRecord::Schema.define(version: 2020_08_18_232740) do
   end
 
   add_foreign_key "answers", "questions", on_delete: :cascade
-  add_foreign_key "gists", "questions"
-  add_foreign_key "gists", "users"
+  add_foreign_key "gists", "questions", on_delete: :cascade
+  add_foreign_key "gists", "users", on_delete: :cascade
   add_foreign_key "questions", "tests", on_delete: :cascade
   add_foreign_key "test_passages", "questions", column: "current_question_id", on_delete: :cascade
   add_foreign_key "test_passages", "tests", on_delete: :cascade
