@@ -25,3 +25,8 @@
   line-height: 30px;
   color: white;
 }
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
