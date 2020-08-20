@@ -29,7 +29,7 @@ en:
         start: "Start"
       form_inline:
         submit: "OK"
-        
+
     gists:
       index:
         url: "Url adress"
@@ -79,4 +79,12 @@ en:
     completed_test:
       subject: "You complete test!"
 
+  feedback:
+    new:
+      title: "Feedback"
+
   description: "A question about %{test} test"
+
+  success: "Success"
+
+  fail: "Fail"

@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_05_171208) do
+ActiveRecord::Schema.define(version: 2020_08_18_232740) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
@@ -64,6 +67,7 @@ ActiveRecord::Schema.define(version: 2020_08_05_171208) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "category_id", null: false
     t.integer "author_id"
+    t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
     t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true
   end
@@ -91,12 +95,12 @@ ActiveRecord::Schema.define(version: 2020_08_05_171208) do
     t.index ["type"], name: "index_users_on_type"
   end
 
-  add_foreign_key "answers", "questions"
-  add_foreign_key "gists", "questions"
-  add_foreign_key "gists", "users"
-  add_foreign_key "questions", "tests"
-  add_foreign_key "test_passages", "questions", column: "current_question_id"
-  add_foreign_key "test_passages", "tests"
-  add_foreign_key "test_passages", "users"
-  add_foreign_key "tests", "categories"
+  add_foreign_key "answers", "questions", on_delete: :cascade
+  add_foreign_key "gists", "questions", on_delete: :cascade
+  add_foreign_key "gists", "users", on_delete: :cascade
+  add_foreign_key "questions", "tests", on_delete: :cascade
+  add_foreign_key "test_passages", "questions", column: "current_question_id", on_delete: :cascade
+  add_foreign_key "test_passages", "tests", on_delete: :cascade
+  add_foreign_key "test_passages", "users", on_delete: :cascade
+  add_foreign_key "tests", "categories", on_delete: :cascade
 end

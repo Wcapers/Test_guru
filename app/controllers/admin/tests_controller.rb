@@ -32,6 +32,8 @@ class Admin::TestsController < Admin::BaseController
      if @test.save
       redirect_to admin_tests_path(@test), notice: t('.success')
     else
+      flash[:error] = t('fail')
+
       redirect_to new_admin_test_path
     end
   end
@@ -41,17 +43,15 @@ class Admin::TestsController < Admin::BaseController
 
   def update
     if @test.update(test_params)
-      redirect_to admin_tests_path
+      redirect_to admin_tests_path, notice: t('success')
     else
       render 'edit'
    end
   end
 
   def destroy
-    def destroy
       @test.destroy
-      redirect_to admin_tests_path
-    end
+      redirect_to admin_tests_path, notice: t('success')
   end
 
   private

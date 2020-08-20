@@ -30,7 +30,7 @@ class TestPassage < ApplicationRecord
   end
 
   def progress_bar
-    (current_question_number * 100) / questions_count
+    ((current_question_number - 1) * 100) / questions_count
   end
 
   def current_question_number

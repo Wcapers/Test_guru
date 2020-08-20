@@ -75,5 +75,12 @@ ru:
     completed_test:
       subject: "Вы прошли тест!"
 
+  feedback:
+    new:
+      title: "Отзыв"
+      label:
+        feedback: "Отзыв"
 
   description: "Вопрос из теста %{test}"
+  success: "Успешно"
+  fail: "Провал"

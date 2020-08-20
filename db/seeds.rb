@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #Insert in users
-timur = User.create(name: 'Timur', login: 'tim_miraz', email: 'tim_miraz@mail.ru', password: 12345)
-ivan = User.create(name: 'Ivan', login: 'ivan_ivan', email: 'ivan_ivana@mail.ru', password: 54321)
+timur = User.create(name: 'Timur', login: 'tim_miraz', email: 'tim_miraz@mail.ru',
+   password: 123456, type: "Admin", first_name: 'Timur', last_name: 'Miraz') 
 
 #Insert in categories
 biology = Category.create(title: 'Биология')
@@ -16,7 +16,7 @@ math = Category.create(title: 'Математика')
 comp_since = Category.create(title: 'Информатика')
 
 #Insert in tests
-first_test = Test.create(title: 'Умножение', level: 3, category_id: math.id, author_id: timur.id )
+first_test = Test.create(title: 'Умножение', level: 3, category_id: math.id, author_id: timur.id)
 second_test = Test.create(title: 'Грибы', level: 2, category_id: biology.id, author_id: timur.id)
 third_test = Test.create(title: 'Биты и байты', level: 4, category_id: comp_since.id, author_id: timur.id)
 fourth_test = Test.create(title: 'Деление', level: 4, category_id: math.id, author_id: timur.id)
