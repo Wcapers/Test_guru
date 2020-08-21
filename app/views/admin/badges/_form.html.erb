@@ -7,6 +7,11 @@
   </p>
 
   <p>
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :badge_description %>
+  </p>
+
+  <p>
     <%= form.label :image %>
     <%= form.text_field :image, id: :badge_image %>
   </p>
@@ -16,6 +21,10 @@
     <%= form.text_field :rule, id: :badge_rule %>
   </p>
 
+  <p>
+    <%= form.label :operand %>
+    <%= form.text_field :operand, id: :badge_operand %>
+  </p>
 
   <p><%= form.submit %></p>
 
