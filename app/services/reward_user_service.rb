@@ -13,7 +13,7 @@ class RewardUserService
 
 
 
-  def all_levels_tests_complete? (level)
+  def all_level_tests_complete? (level)
     level = level.to_i
     @test_passage.test.level == level && @test_passage.success? &&
      @user.tests.where("level = ?", level).uniq.count == Test.where("level = ?", level).count
