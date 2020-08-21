@@ -1,0 +1,16 @@
+<h1> Бэйджи </h1>
+<table class="table">
+  <tr class="table-header">
+    <th class="sort-by-title pointer">
+        Название
+      <%=octicon 'arrow-up',class: 'text-success hide' %>
+        <%=octicon 'arrow-down',class: 'text-success hide' %>
+    </th>
+    <th>img</th>
+    <th> Правило </th>
+    <th colspan="2", align="center"> Actions </th>
+  </tr>
+<%=render @badges%>
+</table>
+
+<%= link_to  'Создать' , new_admin_badge_path %>

@@ -17,10 +17,12 @@ Rails.application.routes.draw do
   end
 
   resources :feedback, only: %i[new create]
+  resources :badges, only: %i[index]
 
   namespace :admin do
     root 'tests#index'
     resources :gists, only: :index
+    resources :badges
     resources :tests do
       patch :update_inline, on: :member
 
