@@ -1,0 +1,27 @@
+<h1> Бэйджи </h1>
+<table class="table">
+  <tr class="table-header">
+    <th class="sort-by-title pointer">
+        Название
+      <%=octicon 'arrow-up',class: 'text-success hide' %>
+        <%=octicon 'arrow-down',class: 'text-success hide' %>
+    </th>
+    <th>img</th>
+    <th> Описание </th>
+  </tr>
+<%=render @badges%>
+</table>
+
+<h1> Полученные бэйджи </h1>
+<table class="table">
+  <tr class="table-header">
+    <th class="sort-by-title pointer">
+        Название
+      <%=octicon 'arrow-up',class: 'text-success hide' %>
+        <%=octicon 'arrow-down',class: 'text-success hide' %>
+    </th>
+    <th>img</th>
+    <th> Описание </th>
+  </tr>
+<%= render @user_badges %>
+</table>

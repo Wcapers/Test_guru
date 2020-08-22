@@ -17,7 +17,7 @@ class TestPassage < ApplicationRecord
     save!
   end
 
-  def succes?
+  def success?
    result >= MIN_TRESHOLD
   end
 

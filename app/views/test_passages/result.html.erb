@@ -1,5 +1,5 @@
 <h1> <%= t('.header', title: @test_passage.test.title) %></h1>
-<% if @test_passage.succes? %>
+<% if @test_passage.success? %>
   <p style="color: green"> Вы прошли тест!<br>
      Результат: <%= @test_passage.result %></p>
 <% else %>
