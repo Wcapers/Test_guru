@@ -11,6 +11,7 @@ ru:
         level: "Сложность"
         questions: "Вопросы"
         actions: "Действия"
+        timer: "Таймер"
       edit:
         edit: "Редактировать тест"
       show:
@@ -41,6 +42,8 @@ ru:
       level: "Сложность"
       questions: "Вопросы"
       actions: "Действия"
+      timer: "Таймер"
+
     helpers:
       submit:
         test:
@@ -51,6 +54,8 @@ ru:
             title: "Название"
             level: "Сложность"
             category_id: "Категория"
+            timer: "Таймер"
+
     test:
       start: "Начать"
 

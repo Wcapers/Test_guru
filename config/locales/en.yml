@@ -11,6 +11,7 @@ en:
         level: "Level"
         questions: "Questions"
         actions: "Actions"
+        timer: "Timer"
       edit:
         edit: "Edit Test"
       show:
@@ -43,6 +44,8 @@ en:
       level: "Level"
       questions: "Questions"
       actions: "Actions"
+      timer: "Timer"
+
 
   test:
     index:
