@@ -8,6 +8,12 @@
     data: { progress_bar: @test_passage.progress_bar} %>
   </div>
 
+  <span>
+    <% if @test_passage.test.timer.present? %>
+    <%= content_tag :span, '', class: 'timer', data: { time_stop: @test_passage.time_stop,
+                                                  test_passage_id: @test_passage.id } %>
+    <% end %>
+  </span>
   <h2>
     <%= @test_passage.current_question.body %>
   </h2>

@@ -37,6 +37,22 @@ class TestPassage < ApplicationRecord
     test.questions.to_a.index(current_question) + 1
   end
 
+  def time_stop
+    (created_at.to_i + self.test.timer * 60) - Time.now.to_i
+  end
+
+  def timer_end?
+    if self.test.timer
+     if time_stop > 0
+       false
+     else
+       true
+     end
+    else
+      false
+    end
+  end
+
   private
 
 

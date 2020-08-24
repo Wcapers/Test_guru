@@ -6,7 +6,9 @@
     <%= f.label :level %> <br>
     <%= f.text_field :level %> <br>
     <%= f.label :category_id %> <br>
-    <%= f.collection_select(:category_id, Category.all, :id, :title) %>
+    <%= f.collection_select(:category_id, Category.all, :id, :title) %> <br>
+    <%= f.label :timer %> <br>
+    <%= f.number_field :timer, id: :test_timer %> <br>
   </p>
   <p><%= f.submit %></p>
 <% end %>
